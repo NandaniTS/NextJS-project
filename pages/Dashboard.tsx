@@ -2,6 +2,15 @@ import React, { useEffect, useState } from "react";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { IoPersonSharp } from "react-icons/io5";
+import { IoFlash } from "react-icons/io5";
+import { MdSpaceDashboard } from "react-icons/md";
+import { FaCartPlus } from "react-icons/fa";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { HiDocumentReport } from "react-icons/hi";
+import { IoReorderFour } from "react-icons/io5";  
+import { IoStatsChart } from "react-icons/io5";
+import { MdLogout } from "react-icons/md";
+import { BsFillFileEarmarkMusicFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 
 type ResponseData = {
@@ -177,46 +186,46 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <div className="w-1/4 border h-[100vh]">
-        <div className=" p-5 text-center text-2xl font-semibold">
-          <h1>Ecom Master</h1>
+        <div className=" p-5 text-center text-2xl font-semibold text-black">
+          <h1 className="flex"><IoFlash style={{marginRight:"10px",color:"blue" }}/> Ecom Master</h1>
         </div>
         <div className="w-full">
           <ul>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
+            <li className="w-[80%] text-black bg-white  p-4   mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center "><MdSpaceDashboard style={{marginRight:"10px"}}/>
               Dashboard
             </li>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
-              Products
+            <li className="w-[80%] text-black bg-white  p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center ">
+             < FaCartPlus style={{marginRight:"10px"}}/> Products
             </li>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
-              Customers
+            <li className="w-[80%] text-black bg-white p-4  mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center ">
+            <BsFillPeopleFill style={{marginRight:"10px"}}/>  Customers
             </li>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
-              Reports
+            <li className="w-[80%] text-black bg-white  p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center ">
+           < HiDocumentReport style={{marginRight:"10px"}}/>   Reports
             </li>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
-              Orders
+            <li className="w-[80%] text-black bg-white  p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center ">
+           <IoReorderFour style={{marginRight:"10px"}}/>   Orders
             </li>
-            <li className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">
-              Statistics
+            <li className="w-[80%] text-black bg-white  p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl  flex items-center ">
+         <IoStatsChart style={{marginRight:"10px"}}/>     Statistics
             </li>
             <li
-              className="w-[80%] text-white bg-blue-500 p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-2 hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500"
+              className="w-[80%] text-black bg-white  p-4 mx-auto py-3 rounded-lg text-center font-semibold text-xl my-3 hover:bg-blue-500 hover:text-white hover:rounded-xl flex items-center "
               onClick={logout}>
-              Log Out
+            < MdLogout style={{marginRight:"10px"}}/>  Log Out
             </li>
           </ul>
         </div>
       </div>
       <div className="w-full">
         <div className="flex justify-between w-full border p-4">
-          <h2 className="text-center text-2xl font-semibold">Electronics</h2>
+          <h2 className="text-center text-2xl font-semibold flex"><BsFillFileEarmarkMusicFill style={{marginRight:"5px",color:"blue",marginTop:"5px"}}/>Electronics</h2>
           <input
             type="text"
             className="border border-gray-200 p-2 rounded-xl w-1/2"
             placeholder="Search"
           />
-          <div className="w-1/5 flex justify-between">
+          <div className="w-1/6 flex justify-between">
             <button className="border p-3 rounded-lg">
               <IoMoonOutline />
             </button>
